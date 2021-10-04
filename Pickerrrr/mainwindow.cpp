@@ -34,9 +34,17 @@ void MainWindow::on_dateEdit_dateChanged(const QDate &date)
     str = str.trimmed();
     QDate bb = QDate::fromString(str,"dd.MM.yyyy");
 
+    QDate enddd = ui->dateEdit_2->date();
+
+    if (enddd>bb)
+    {
+    }
+    else
+    {
     ui->dateEdit_2->setDate(bb);
     ui->dateEdit_2->setMinimumDate(bb);
     ui->label_3->setText(str);
+    }
 }
 
 
